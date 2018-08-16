@@ -2,7 +2,7 @@
 //2. Determinar se 3 inteiros formam um triângulo;
 import java.util.*;
 
-public class Exercicio02 {
+public class Aula00Exercicio02 {
 	public static void main(String[] args) {
 		int a, b, c;
 		Scanner input = new Scanner(System.in);

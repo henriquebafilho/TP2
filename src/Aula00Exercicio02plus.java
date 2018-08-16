@@ -1,7 +1,7 @@
 //2. Determinar se os números 348, 567 e 937 formam um triângulo;
 import java.util.*;
 
-public class Exercicio02plus {
+public class Aula00Exercicio02plus {
 	public static void main(String[] args) {
 		int a = 348, b = 567, c = 937;
 		Scanner input = new Scanner(System.in);

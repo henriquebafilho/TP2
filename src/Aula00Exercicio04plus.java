@@ -1,15 +1,11 @@
 
-//4. Verificar se uma palavra é um palíndromo1;
-//1Não utilizar nenhuma função da classe String — exceto charAt()
+//3. Verifica se a palavra “ATTACGGAGGTCCATACTTGGTTCATCCTGGAGGCATTA” (sem espaços) é um palíndromo;
 import java.util.*;
 
-public class Exercicio04 {
+public class Aula00Exercicio04plus {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		String palavra = new String();
-
-		System.out.println("Insira uma palavra para checar se ela é um palíndromo:");
-		palavra = input.nextLine();
+		String palavra = new String("ATTACGGAGGTCCATACTTGGTTCATCCTGGAGGCATTA");
 
 		if (palindromo(palavra)) {
 			System.out.println("A palavra é um palíndromo.");
@@ -24,7 +20,7 @@ public class Exercicio04 {
 		for (int i = 0; i < p.length(); i++) {
 			if (p.charAt(i) == p.charAt(p.length() - 1 - i)) {
 				palin = true;
-			}else{
+			} else {
 				palin = false;
 				break;
 			}
