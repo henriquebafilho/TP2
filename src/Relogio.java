@@ -1,38 +1,27 @@
-
-/* Nome: Henrique Borges de Almeida Filho
- * 3. Hora (sem data): incrementos e decrementos (em
-segundos), impressão em tela em formato
-curto e longo*/
-import java.util.*;
+import java.util.Scanner;
 
 public class Relogio {
 	public int horas;
 	public int minutos;
 	public int segundos;
-
+	
 	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		System.out.println("1 - Insira as horas:");
-		int h = entrada.nextInt();
-		System.out.println("2 - Insira os minutos:");
-		int m = entrada.nextInt();
-		System.out.println("3 - Insira os segundos:");
-		int s = entrada.nextInt();
-		
+		System.out.println("Coloque a hora atual:");
+		int h = scan.nextInt();
+		int m = scan.nextInt();
+		int s = scan.nextInt();
 		Relogio tempo = new Relogio(h, m, s);
-		
-		if (tempo.segundos == 60) {
+		if (tempo.segundos == 60)
 			tempo.segundoMinuto();
-		}
-		if (tempo.minutos == 60) {
+		if (tempo.minutos == 60)
 			tempo.minutoHora();
-		}
-		if (tempo.horas == 24) {
+		if (tempo.horas == 24)
 			tempo.hora24();
-		}
 
 		System.out.println(tempo.horas + ":" + tempo.minutos + ":" + tempo.segundos);
+		System.out.println(tempo.horas + ":" + tempo.minutos);
 	}
 
 	public void segundoMinuto() {
@@ -49,7 +38,7 @@ public class Relogio {
 		horas = 0;
 	}
 
-	public void incrementarSegundo() {
+	public void incrementoSegundo() {
 		segundos += 1;
 	}
 
@@ -58,4 +47,5 @@ public class Relogio {
 		this.minutos = minuto;
 		this.segundos = segundo;
 	}
+
 }
