@@ -1,4 +1,5 @@
 
+/*3. As cartas de um baralho — inclua como atributos seu valor de face e seu naipe*/
 import java.util.*;
 
 public class Baralho {
@@ -17,20 +18,20 @@ public class Baralho {
 		System.out.println("Cartas especiais: (1 - A, 11 - J, 12 - Q, 13 - K)");
 		numero = entrada.nextInt();
 
-		Carta(naipe,numero);
+		Carta(naipe, numero);
 	}
+
 	public static void Carta(int n, int v) {
-		if((n < 1) || (n > 4)) {
-			throw new IllegalArgumentException( "Naipe inválido" );
-		}else if((v<1)||(v>13)) {
-			throw new IllegalArgumentException( "Nome inválido" );
-		}else {
-			System.out.println(retorNaipe(n)+" - "+retornaValor(v));
+		if ((n < 1) || (n > 4)) {
+			throw new IllegalArgumentException("Naipe inválido");
+		} else if ((v < 1) || (v > 13)) {
+			throw new IllegalArgumentException("Nome inválido");
+		} else {
+			System.out.println(retorNaipe(n) + " - " + retornaValor(v));
 		}
 	}
 
 	public enum Naipe {
-
 		COPAS(1, "Copas"), ESPADAS(2, "Espadas"), OUROS(3, "Ouros"), PAUS(4, "Paus");
 
 		private int valor;
@@ -93,3 +94,9 @@ public class Baralho {
 		return retornaValue;
 	}
 }
+/*5. No exercício 3, pedimos para você representar cartas de um baralho como objetos de uma
+enumeração. Por que isto, na verdade, não é adequado?
+* Resposta: Porque para que fique adequado, é necessário criar um objeto que represente
+* cada carta, o que é muito trabalhoso, visto que todos os naipes possuem as cartas de 2 a 10 +
+* A, J, Q e K.
+*/
