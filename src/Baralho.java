@@ -4,23 +4,23 @@ import java.util.*;
 public class Baralho {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-		int nipe, numero;
+		int naipe, numero;
 
 		System.out.println("Insira um número que represente o naipe da sua carta:");
 		System.out.println("1 - Copas");
 		System.out.println("2 - Espadas");
 		System.out.println("3 - Ouros");
 		System.out.println("4 - Paus");
-		nipe = entrada.nextInt();
+		naipe = entrada.nextInt();
 
 		System.out.println("Insira o valor da sua carta:");
 		System.out.println("Cartas especiais: (1 - A, 11 - J, 12 - Q,13 - K)");
 		numero = entrada.nextInt();
 
-		Carta(nipe,numero);
+		Carta(naipe,numero);
 	}
-	public static void Carta(int naipe, int valor) {
-		System.out.println(retorNaipe(naipe)+" - "+retornaValor(valor));
+	public static void Carta(int n, int v) {
+		System.out.println(retorNaipe(n)+" - "+retornaValor(v));
 	}
 
 	public enum Naipe {
