@@ -14,13 +14,19 @@ public class Baralho {
 		naipe = entrada.nextInt();
 
 		System.out.println("Insira o valor da sua carta:");
-		System.out.println("Cartas especiais: (1 - A, 11 - J, 12 - Q,13 - K)");
+		System.out.println("Cartas especiais: (1 - A, 11 - J, 12 - Q, 13 - K)");
 		numero = entrada.nextInt();
 
 		Carta(naipe,numero);
 	}
 	public static void Carta(int n, int v) {
-		System.out.println(retorNaipe(n)+" - "+retornaValor(v));
+		if((n < 1) || (n > 4)) {
+			throw new IllegalArgumentException( "Naipe inválido" );
+		}else if((v<1)||(v>13)) {
+			throw new IllegalArgumentException( "Nome inválido" );
+		}else {
+			System.out.println(retorNaipe(n)+" - "+retornaValor(v));
+		}
 	}
 
 	public enum Naipe {
@@ -62,9 +68,9 @@ public class Baralho {
 		private int valor;
 		private String nome;
 
-		Valor(int valor, String naipe) {
+		Valor(int valor, String nome) {
 			this.valor = valor;
-			this.nome = naipe;
+			this.nome = nome;
 		}
 
 		public int getValor() {
