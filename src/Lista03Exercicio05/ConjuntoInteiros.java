@@ -44,7 +44,7 @@ public class ConjuntoInteiros {
 		HashSet<Integer> intersecao = new HashSet<Integer>();
 
 		for (int i = 0; i < a.cardinalidade(); i++) {
-			for (int j = 0; j < a.cardinalidade(); j++) {
+			for (int j = 0; j < b.cardinalidade(); j++) {
 				if (a.getConjunto().get(i) == b.getConjunto().get(j)) {
 					intersecao.add(a.getConjunto().get(i));
 				}
