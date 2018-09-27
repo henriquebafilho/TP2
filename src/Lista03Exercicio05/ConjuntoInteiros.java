@@ -85,10 +85,42 @@ public class ConjuntoInteiros {
 	}
 
 	// (d) decidir se um conjunto é subconjunto de outro;
-	public String subconjunto(ArrayList<Integer> a, ArrayList<Integer> b) {
-		String sub = new String();
-		// TODO
-		return sub;
+	public String subconjunto(ConjuntoInteiros a, ConjuntoInteiros b) {
+		int iguais = 0;
+		
+		if(a.cardinalidade()>b.cardinalidade()) {
+			for(int i = 0; i < a.cardinalidade(); i++) {
+				for(int j = 0; j < b.cardinalidade(); j++) {
+					if(a.getConjunto().get(i)==b.getConjunto().get(j)) {
+						iguais += 1;
+					}
+				}
+			}
+			if(iguais==b.cardinalidade()) {
+				return "b é um subconjunto de a";
+			}else {
+				return "b não é um subconjunto de a";
+			}
+		}else if(b.cardinalidade()>a.cardinalidade()) {
+			for(int i = 0; i < b.cardinalidade(); i++) {
+				for(int j = 0; j < a.cardinalidade(); j++) {
+					if(b.getConjunto().get(i)==a.getConjunto().get(j)) {
+						iguais += 1;
+					}
+				}
+			}
+			if(iguais==a.cardinalidade()) {
+				return "a é um subconjunto de b";
+			}else {
+				return "a não é um subconjunto de b";
+			}
+		}else {
+			if(testaIgualdade(a,b)=="Os conjuntos não são iguais") {
+				return "Um conjunto não é subconjunto do outro";
+			}else {
+				return "Um conjunto é subconjunto do outro e são iguais";
+			}
+		}
 	}
 
 	// (e) decidir se dois conjuntos são iguais;

@@ -20,7 +20,7 @@ public class principal {
 		System.out.println("A interseção dos conjuntos é "+conjunto1.intersecao(conjunto1, conjunto2));
 		System.out.println("A diferença dos conjuntos é "+conjunto1.diferenca(conjunto1, conjunto2));
 		//(d) decidir se um conjunto é subconjunto de outro;
-		System.out.println();
+		System.out.println(conjunto1.subconjunto(conjunto1, conjunto2));
 		//(e) decidir se dois conjuntos são iguais;
 		System.out.println(conjunto1.testaIgualdade(conjunto1, conjunto2));
 	}
