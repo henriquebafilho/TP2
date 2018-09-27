@@ -5,8 +5,9 @@ import java.util.*;
 public class principal {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-		ArrayList<Integer> conjunto1 = new ArrayList<Integer>();
-		ArrayList<Integer> conjunto2 = new ArrayList<Integer>();
+		//ArrayList<Integer> conjunto1 = new ArrayList<Integer>();
+		ConjuntoInteiros conjunto1 = new ConjuntoInteiros();
+		ConjuntoInteiros conjunto2 = new ConjuntoInteiros();
 
 		conjunto1 = editaConjunto(1);
 		System.out.println("Pronto! O conjunto 1 já foi criado.");
@@ -14,14 +15,17 @@ public class principal {
 		System.out.println("--------------------------------");
 		conjunto2 = editaConjunto(2);
 		
+		//(c) calcular união, interseção e diferença de dois conjuntos;
 		System.out.println("A união dos conjuntos é ");
 		System.out.println("A interseção dos conjuntos é ");
 		System.out.println("A diferença dos conjuntos é ");
-		//dizer se um número é subconjunto do outro
-		//dizer se os conjuntos são iguais
+		//(d) decidir se um conjunto é subconjunto de outro;
+		System.out.println();
+		//(e) decidir se dois conjuntos são iguais;
+		System.out.println(conjunto1.testaIgualdade(conjunto1, conjunto2));
 	}
 
-	public static ArrayList<Integer> editaConjunto(int numConjunto) {
+	public static ConjuntoInteiros editaConjunto(int numConjunto) {
 		Scanner entrada = new Scanner(System.in);
 		ConjuntoInteiros conjunto = new ConjuntoInteiros();
 
@@ -55,7 +59,7 @@ public class principal {
 		// de seus elementos, em notação de chaves
 		// (b) calcular a cardinalidade de um conjunto, isto é, quantos elementos ele tem
 		System.out.println("conjunto " + numConjunto + ": " + conjunto.imprimeResultado());
-		return conjunto.getConjunto();
+		return conjunto;
 	}
 
 }
