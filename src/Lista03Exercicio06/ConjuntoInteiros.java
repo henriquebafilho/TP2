@@ -1,5 +1,4 @@
-/*Crie uma classe ConjuntoInteiros para representar conjuntos finitos de números inteiros.*/
-package Lista03Exercicio05;
+package Lista03Exercicio06;
 
 import java.util.*;
 
