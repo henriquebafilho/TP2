@@ -16,7 +16,7 @@ public class principal {
 		conjunto2 = editaConjunto(2);
 		
 		//(c) calcular união, interseção e diferença de dois conjuntos;
-		System.out.println("A união dos conjuntos é ");
+		System.out.println("A união dos conjuntos é "+conjunto1.uniao(conjunto1, conjunto2));
 		System.out.println("A interseção dos conjuntos é ");
 		System.out.println("A diferença dos conjuntos é ");
 		//(d) decidir se um conjunto é subconjunto de outro;

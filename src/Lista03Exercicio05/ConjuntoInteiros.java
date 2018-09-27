@@ -26,9 +26,27 @@ public class ConjuntoInteiros {
 	}
 
 	// (c) calcular união, interseção e diferença de dois conjuntos;
-	public ArrayList<Integer> uniao(ArrayList<Integer> a, ArrayList<Integer> b) {
+	public ArrayList<Integer> uniao(ConjuntoInteiros a, ConjuntoInteiros b) {
 		ArrayList<Integer> uniao = new ArrayList<Integer>();
-		// TODO
+		int igual = 0;
+
+		// adicionando os elementos do conjunto a ao conjunto união
+		for (int i = 0; i < a.cardinalidade(); i++) {
+			uniao.add(a.getConjunto().get(i));
+		}
+		// checando se cada elemento de b está no conjunto uniao. se não estiver, ele
+		// será adicionado
+		for (int i = 0; i < b.cardinalidade(); i++) {
+			igual = 0;
+			for (int j = 0; j < uniao.size(); j++) {
+				if(b.getConjunto().get(i)==uniao.get(j)) {
+					igual += 1;
+				}
+			}
+			if(igual<uniao.size()) {
+				uniao.add(b.getConjunto().get(i));
+			}
+		}
 		return uniao;
 	}
 
@@ -63,9 +81,6 @@ public class ConjuntoInteiros {
 					}
 				}
 			}
-			System.out.println("numiguais "+numIguais);
-			System.out.println("a cardinal "+a.cardinalidade());
-			System.out.println("b cardinal "+b.cardinalidade());
 			if (numIguais == a.cardinalidade()) {
 				return "Os conjuntos são iguais";
 			} else {
