@@ -9,5 +9,6 @@ arbitrárias. Declare nesta interface os métodos perimetro() e area(), cujo objet
 um método descricao(), cujo objetivo é retornar uma descrição textual da forma
 geométrica na forma de uma string.*/
 public interface FormaGeometrica {
-
+	double perimetro();
+	double area();
 }

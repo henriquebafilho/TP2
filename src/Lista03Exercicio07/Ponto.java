@@ -4,7 +4,7 @@ import java.util.*;
 import java.lang.*;
 
 //a)Crie uma classe Ponto para representar pontos em R^2, com coordenadas reais.
-public class Ponto {
+public class Ponto implements FormaGeometrica{
 	double x, y;
 
 	Ponto(double x, double y) {
@@ -12,7 +12,7 @@ public class Ponto {
 		this.y = y;
 	}
 
-	// b)Implemente nesta classe um m´etodo est´atico dist que calcule a distˆancia
+	// b)Implemente nesta classe um método estático dist que calcule a distância
 	// entre dois pontos quaisquer.
 	public static double dist(Ponto zero, Ponto um) {
 		double distancia = Math.sqrt(Math.pow(zero.x - um.x, 2) + Math.pow(zero.y - um.y, 2));
