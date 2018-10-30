@@ -13,5 +13,6 @@ public interface FormaGeometrica {
 	double area();
 	double lado();
 	double apotema();
+	int getNumLados();
 	String descricao();
 }

@@ -28,4 +28,7 @@ public class Circulo implements FormaGeometrica {
 		return raio * Math.cos(pi / raio);
 	}
 
+	public int getNumLados() {
+		return 0;
+	}
 }
