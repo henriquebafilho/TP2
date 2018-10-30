@@ -64,4 +64,8 @@ public class PoligonoRegular implements FormaGeometrica {
 			return "O polígono não possui nome";
 		}
 	}
+	
+	public int getNumLados() {
+		return numLados;
+	}
 }
