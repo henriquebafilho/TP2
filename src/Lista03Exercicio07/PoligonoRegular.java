@@ -1,7 +1,15 @@
 package Lista03Exercicio07;
 
+/*d)Crie uma classe PoligonoRegular para representar pol´ıgonos regulares utilizando esta
+estrutura simplificada. Esta classe deve implementar a interface FormaGeometrica e os
+objetos representados por esta classe devem possuir, al´em das informa¸c˜oes j´a listadas,
+um nome.
+Nesta classe, implemente os m´etodos adicionais lado() e apotema(), que calculam
+o comprimento dos lados e dos ap´otemas do pol´ıgono regular.
+ */
+
 public class PoligonoRegular implements FormaGeometrica {
-	int numLados;
+	private int numLados;
 	private double raio;
 	private static double pi = 3.14;
 
@@ -29,31 +37,31 @@ public class PoligonoRegular implements FormaGeometrica {
 	public String descricao() {
 		switch (numLados) {
 		case 3:
-			return "tri�ngulo";
+			return "triângulo";
 		case 4:
-			return "quadr�ngulo";
+			return "quadrângulo";
 		case 5:
-			return "pent�gono";
+			return "pentágono";
 		case 6:
-			return "hex�gono";
+			return "hexágono";
 		case 7:
-			return "hept�gono";
+			return "heptágono";
 		case 8:
-			return "oct�gono";
+			return "octógono";
 		case 9:
-			return "ene�gono";
+			return "eneágono";
 		case 10:
-			return "dec�gono";
+			return "decágono";
 		case 11:
-			return "undec�gono";
+			return "undecágono";
 		case 12:
-			return "dodec�gono";
+			return "dodecágono";
 		case 15:
-			return "pentadec�gono";
+			return "pentadecágono";
 		case 20:
-			return "icos�gono";
+			return "icoságono";
 		default:
-			return "O pol�gono n�o possui nome";
+			return "O polígono não possui nome";
 		}
 	}
 }
