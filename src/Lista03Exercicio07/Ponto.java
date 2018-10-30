@@ -12,7 +12,6 @@ public class Ponto{
 		this.y = y;
 	}
 
-
 	// b)Implemente nesta classe um método estático dist que calcule a distância
 	// entre dois pontos quaisquer.
 	public static double dist(Ponto zero, Ponto um) {

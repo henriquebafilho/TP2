@@ -11,5 +11,7 @@ geométrica na forma de uma string.*/
 public interface FormaGeometrica {
 	double perimetro();
 	double area();
+	double lado();
+	double apotema();
 	String descricao();
 }
