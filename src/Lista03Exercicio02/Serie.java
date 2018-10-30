@@ -10,7 +10,7 @@ public class Serie {
 	ArrayList<Episodio> episodios = new ArrayList();
 	int temporadas, anoLancamento;
 
-	Serie(String nome, String sinopse, int anoLancamento, String genero, int temporadas, ArrayList<String> elenco, ArrayList<Episodio> episodios) {
+	Serie(String nome, String sinopse, int anoLancamento, String genero, int temporadas) {
 		this.nome = nome;
 		this.sinopse = sinopse;
 		this.anoLancamento = anoLancamento;
@@ -59,20 +59,8 @@ public class Serie {
 	}
 
 	// Calcular total de episódios de uma série;
-	public int qtdEpisodios(ArrayList<Episodio> episodios) {
-		return episodios.size();
-	}
-
-	public ArrayList<Episodio> getEpisodios() {
-		return episodios;
-	}
-
-	public void setEpisodios(ArrayList<Episodio> episodios) {
-		this.episodios = episodios;
-	}
-
-	public void setElenco(ArrayList<String> elenco) {
-		this.elenco = elenco;
+	public int qtdEpisodios() {
+		return this.episodios.size();
 	}
 
 	// Adicionar um novo episódio a uma série;
@@ -92,7 +80,7 @@ public class Serie {
 		int duracao = 0;
 
 		for (Episodio epi : this.episodios) {
-			epi.duracao += duracao;
+			 duracao += epi.duracao;
 		}
 		return duracao;
 	}

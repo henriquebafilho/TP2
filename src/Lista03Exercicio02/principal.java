@@ -5,12 +5,10 @@ import java.util.*;
 public class principal {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-		ArrayList<String> elenco = new ArrayList();
-		ArrayList<Episodio> episodios = new ArrayList();
 
 		// Criando a série
 		Serie bobEsponja = new Serie("Bob Esponja", "Uma esponja que vive no mar e veste uma calça quadrada.", 1999,
-				"comédia", 2, elenco, episodios);
+				"Comédia", 2);
 
 		// Setando elenco da série
 		bobEsponja.setElenco("Bob Esponja");
@@ -41,7 +39,16 @@ public class principal {
 		bobEsponja.setEpisodio(t02e02);
 		bobEsponja.setEpisodio(t02e03);
 		
-		System.out.println("Duração da série "+bobEsponja.getNome()+" : "+bobEsponja.getDuracao()+" minutos.");
+		mostrarDados(bobEsponja);
+	}
+	public static void mostrarDados(Serie serie) {
+		System.out.println(serie.getNome());
+		System.out.println("A série tem "+serie.qtdEpisodios()+" episódios e "+serie.getTemporadas()+" temporadas");
+		System.out.println("Duração da série: "+serie.getDuracao()+" minutos.");
+		System.out.println("Data de lançamento: "+serie.getAnoLancamento());
+		System.out.println("Gênero: "+serie.getGenero());
+		System.out.println("Sinopse: "+serie.getSinopse());
+		System.out.println("Elenco: "+serie.elenco);
 	}
 
 }
